@@ -12,14 +12,16 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme') as Theme | null
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      return savedTheme || (prefersDark ? 'dark' : 'light')
-    }
-    return 'light'
-  })
+  // Always start with 'light' for SSR to avoid hydration mismatch
+  const [theme, setTheme] = useState<Theme>('light')
+
+  // Load theme from localStorage after mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme | null
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light')
+    setTheme(initialTheme)
+  }, [])
 
   useEffect(() => {
     const root = document.documentElement

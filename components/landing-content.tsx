@@ -9,18 +9,26 @@ import {
   Check,
   FileText,
   Users,
-  Zap,
   Mail,
   BarChart3,
   Shield,
-  Sparkles,
+  FolderKanban,
+  Receipt,
 } from 'lucide-react'
 
 export function LandingContent() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/20">
-        <ThemeToggle />
+        {/* Top right buttons */}
+        <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
+          <Link href="https://solopack.app/auth/login">
+            <button className="px-4 py-3 rounded-full bg-card/80 backdrop-blur-sm border border-border shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 font-medium text-sm">
+              Se connecter
+            </button>
+          </Link>
+          <ThemeToggle />
+        </div>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -45,9 +53,8 @@ export function LandingContent() {
             {/* Badge */}
             <div className="flex justify-center mb-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-                <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">
-                  Facturation intelligente pour entrepreneurs
+                  Pack d&apos;outils pour solopreneurs
                 </span>
               </div>
             </div>
@@ -55,30 +62,25 @@ export function LandingContent() {
             {/* Heading */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center mb-8 tracking-tight">
               <span className="bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 bg-clip-text text-transparent">
-                Facturez en toute
+                Gérez votre entreprise
               </span>
               <br />
               <span className="bg-gradient-to-r from-primary via-primary/90 to-primary/80 bg-clip-text text-transparent">
-                simplicité
+                en toute simplicité
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              La plateforme complète pour gérer vos clients, créer des factures professionnelles et suivre vos paiements.
+            <p className="text-xl md:text-2xl text-center text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed">
+              La plateforme tout-en-un pour gérer vos clients, projets, factures et comptabilité.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center items-center">
               <Link href="https://solopack.app/auth/register">
                 <button className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 flex items-center gap-2">
-                  Commencer gratuitement
+                  Joindre la bêta
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
-              <Link href="https://solopack.app/auth/login">
-                <button className="px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold text-lg border border-border hover:bg-accent transition-colors duration-200">
-                  Se connecter
                 </button>
               </Link>
             </div>
@@ -99,7 +101,7 @@ export function LandingContent() {
               Tout ce qu&apos;il vous faut
             </h2>
             <p className="text-xl text-muted-foreground">
-              Une solution complète, simple et puissante pour votre facturation
+              Tout ce dont vous avez besoin pour gérer votre entreprise
             </p>
           </div>
 
@@ -129,11 +131,11 @@ export function LandingContent() {
             {/* Feature 3 */}
             <div className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
               <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Mail className="h-6 w-6 text-primary" />
+                <FolderKanban className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Envoi automatique</h3>
+              <h3 className="text-xl font-semibold mb-3">Gestion de projets</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Envoyez vos factures par email directement depuis la plateforme.
+                Suivez vos projets avec budgets, documents et factures liées.
               </p>
             </div>
 
@@ -142,9 +144,9 @@ export function LandingContent() {
               <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <BarChart3 className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Tableau de bord</h3>
+              <h3 className="text-xl font-semibold mb-3">Comptabilité simplifiée</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Visualisez vos statistiques et revenus en temps réel.
+                Suivez vos revenus, dépenses et visualisez vos rapports financiers.
               </p>
             </div>
 
@@ -162,11 +164,11 @@ export function LandingContent() {
             {/* Feature 6 */}
             <div className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
               <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Zap className="h-6 w-6 text-primary" />
+                <Receipt className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Ultra rapide</h3>
+              <h3 className="text-xl font-semibold mb-3">TPS/TVQ automatique</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Interface moderne et réactive pour une expérience fluide.
+                Calcul automatique des taxes québécoises sur vos factures.
               </p>
             </div>
           </div>
@@ -182,7 +184,7 @@ export function LandingContent() {
                 Tarification transparente
               </h2>
               <p className="text-xl text-muted-foreground">
-                Commencez gratuitement, évoluez à votre rythme
+                Rejoignez la bêta et profitez d&apos;une offre exclusive
               </p>
             </div>
 
@@ -205,9 +207,9 @@ export function LandingContent() {
                   {[
                     'Clients illimités',
                     'Factures illimitées',
-                    'Envoi par email',
-                    'Tableau de bord complet',
-                    'Thème clair/sombre',
+                    'Gestion de projets',
+                    'Comptabilité complète',
+                    'TPS/TVQ automatique',
                     'Support par email',
                   ].map((feature) => (
                     <div key={feature} className="flex items-center gap-3">
@@ -237,14 +239,14 @@ export function LandingContent() {
 
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-8">
-            Prêt à simplifier votre facturation ?
+            Prêt à simplifier la gestion de votre entreprise ?
           </h2>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto">
-            Rejoignez les entrepreneurs qui font confiance à SoloPack
+            Devenez beta testeur et profitez de 50% à vie
           </p>
           <Link href="https://solopack.app/auth/register">
             <button className="px-10 py-5 bg-background text-foreground rounded-xl font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-200 hover:scale-105 inline-flex items-center gap-2">
-              Créer mon compte gratuitement
+              Devenir beta testeur
               <ArrowRight className="h-5 w-5" />
             </button>
           </Link>
@@ -258,8 +260,11 @@ export function LandingContent() {
             <div className="flex justify-center mb-6">
               <ThemeLogo width={200} height={50} className="h-8 w-auto opacity-60" />
             </div>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-2">
               © 2025 SoloPack. Tous droits réservés.
+            </p>
+            <p className="text-muted-foreground mb-6 text-sm">
+              Fait avec ❤️ au Québec pour les entrepreneurs d&apos;ici
             </p>
             <div className="flex justify-center gap-8 text-sm">
               <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
