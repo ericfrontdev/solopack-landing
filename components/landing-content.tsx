@@ -267,10 +267,10 @@ export function LandingContent() {
               Fait avec ❤️ au Québec pour les entrepreneurs d&apos;ici
             </p>
             <div className="flex justify-center gap-8 text-sm">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/politique-confidentialite" className="text-muted-foreground hover:text-primary transition-colors">
                 Confidentialité
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/cgu" className="text-muted-foreground hover:text-primary transition-colors">
                 Conditions
               </Link>
               <Link href="mailto:contact@getsolopack.com" className="text-muted-foreground hover:text-primary transition-colors">
