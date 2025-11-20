@@ -1,10 +1,10 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { ThemeLogo } from '@/components/theme-logo'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { ThemeProvider } from '@/lib/theme-context'
+import { ThemeProvider, useTheme } from '@/lib/theme-context'
 import { LanguageSelector } from '@/components/language-selector'
 import {
   ArrowRight,
@@ -17,8 +17,18 @@ import {
   Receipt,
 } from 'lucide-react'
 
-export function LandingContent() {
+function LandingContentInner() {
   const t = useTranslations()
+  const locale = useLocale()
+  const { theme } = useTheme()
+
+  const getAppUrl = (path: string) => {
+    const params = new URLSearchParams()
+    if (theme === 'dark') params.set('theme', 'dark')
+    if (locale === 'en') params.set('lang', 'en')
+    const queryString = params.toString()
+    return `https://solopack.app${path}${queryString ? `?${queryString}` : ''}`
+  }
 
   const pricingFeatures = [
     t('pricing.features.clients'),
@@ -30,18 +40,17 @@ export function LandingContent() {
   ]
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/20">
-        {/* Top right buttons */}
-        <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
-          <a href="https://solopack.app/auth/login">
-            <button className="px-4 py-3 rounded-full bg-card/80 backdrop-blur-sm border border-border shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 font-medium text-sm">
-              {t('nav.login')}
-            </button>
-          </a>
-          <LanguageSelector />
-          <ThemeToggle />
-        </div>
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/20">
+      {/* Top right buttons */}
+      <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
+        <a href={getAppUrl('/auth/login')}>
+          <button className="px-4 py-3 rounded-full bg-card/80 backdrop-blur-sm border border-border shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 font-medium text-sm">
+            {t('nav.login')}
+          </button>
+        </a>
+        <LanguageSelector />
+        <ThemeToggle />
+      </div>
 
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -90,7 +99,7 @@ export function LandingContent() {
 
               {/* CTA Buttons */}
               <div className="flex justify-center items-center">
-                <a href="https://solopack.app/auth/register">
+                <a href={getAppUrl('/auth/register')}>
                   <button className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 flex items-center gap-2">
                     {t('hero.cta')}
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -260,7 +269,7 @@ export function LandingContent() {
                   </div>
 
                   <a
-                    href="https://solopack.app/auth/register"
+                    href={getAppUrl('/auth/register')}
                     className="block"
                   >
                     <button className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2">
@@ -285,7 +294,7 @@ export function LandingContent() {
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto">
               {t('cta2.subtitle')}
             </p>
-            <a href="https://solopack.app/auth/register">
+            <a href={getAppUrl('/auth/register')}>
               <button className="px-10 py-5 bg-background text-foreground rounded-xl font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-200 hover:scale-105 inline-flex items-center gap-2">
                 {t('cta2.button')}
                 <ArrowRight className="h-5 w-5" />
@@ -334,7 +343,14 @@ export function LandingContent() {
             </div>
           </div>
         </footer>
-      </div>
+    </div>
+  )
+}
+
+export function LandingContent() {
+  return (
+    <ThemeProvider>
+      <LandingContentInner />
     </ThemeProvider>
   )
 }
