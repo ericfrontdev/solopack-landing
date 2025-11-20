@@ -1,13 +1,21 @@
-import Link from 'next/link'
+import { setRequestLocale } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { ArrowLeft } from 'lucide-react'
 
-export default function CGUPage() {
+export default async function CGUPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="mb-6">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="h-4 w-4" />
-          Retour à l&apos;accueil
+          {locale === 'fr' ? "Retour à l'accueil" : 'Back to home'}
         </Link>
       </div>
 

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "SoloPack - Facturation simplifiée pour entrepreneurs",
+    "description": "Gérez vos clients, créez des factures professionnelles et suivez vos paiements en toute simplicité."
+  },
+  "nav": {
+    "login": "Se connecter"
+  },
+  "hero": {
+    "badge": "Pack d'outils pour solopreneurs",
+    "title1": "Gérez votre entreprise",
+    "title2": "en toute simplicité",
+    "subtitle": "La plateforme tout-en-un pour gérer vos clients, projets, factures et comptabilité.",
+    "cta": "Joindre la bêta",
+    "trust": "Gratuit pendant la bêta • Aucune carte requise • Configuration en 2 minutes"
+  },
+  "cta1": {
+    "text": "SoloPack est la plateforme la plus simple pour gérer votre entreprise : clients, factures, projets, paiements et comptabilité — tout au même endroit."
+  },
+  "features": {
+    "title": "Tout ce qu'il vous faut",
+    "subtitle": "Tout ce dont vous avez besoin pour gérer votre entreprise",
+    "crm": {
+      "title": "CRM complet",
+      "description": "Centralisez toutes les informations de vos clients en un seul endroit sécurisé."
+    },
+    "invoicing": {
+      "title": "Facturation professionnelle TPS/TVQ",
+      "description": "Créez des factures professionnelles avec votre branding en quelques clics."
+    },
+    "projects": {
+      "title": "Suivi de projets et budgets",
+      "description": "Suivez vos projets avec budgets, documents et factures liées."
+    },
+    "accounting": {
+      "title": "Comptabilité simple et rapports",
+      "description": "Suivez vos revenus, dépenses et visualisez vos rapports financiers."
+    },
+    "security": {
+      "title": "Données sécurisées",
+      "description": "Vos données sont protégées et isolées dans un environnement multi-tenant."
+    },
+    "taxes": {
+      "title": "Calcul TPS/TVQ automatique",
+      "description": "Calcul automatique des taxes québécoises sur vos factures."
+    }
+  },
+  "pricing": {
+    "title": "Tarification transparente",
+    "subtitle": "Rejoignez la bêta et profitez d'une offre exclusive",
+    "badge": "Bêta gratuite",
+    "planTitle": "Gratuit pendant la bêta",
+    "planDescription": "50 places seulement – accès complet, sans carte de crédit",
+    "features": {
+      "clients": "Clients illimités",
+      "invoices": "Factures illimitées",
+      "projects": "Gestion de projets",
+      "accounting": "Comptabilité complète",
+      "taxes": "TPS/TVQ automatique",
+      "support": "Support par email"
+    },
+    "cta": "Commencer maintenant"
+  },
+  "cta2": {
+    "title": "Prêt à simplifier la gestion de votre entreprise ?",
+    "subtitle": "Devenez beta testeur et profitez de 50% à vie",
+    "button": "Devenir beta testeur"
+  },
+  "footer": {
+    "copyright": "© 2025 SoloPack. Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ au Québec pour les entrepreneurs d'ici",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact"
+  }
+}

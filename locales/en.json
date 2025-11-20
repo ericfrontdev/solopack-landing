@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "SoloPack - Simplified invoicing for entrepreneurs",
+    "description": "Manage your clients, create professional invoices, and track your payments with ease."
+  },
+  "nav": {
+    "login": "Sign in"
+  },
+  "hero": {
+    "badge": "Toolkit for solopreneurs",
+    "title1": "Manage your business",
+    "title2": "with ease",
+    "subtitle": "The all-in-one platform to manage your clients, projects, invoices, and accounting.",
+    "cta": "Join the beta",
+    "trust": "Free during beta • No credit card required • 2-minute setup"
+  },
+  "cta1": {
+    "text": "SoloPack is the simplest platform to manage your business: clients, invoices, projects, payments, and accounting — all in one place."
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "All the tools you need to manage your business",
+    "crm": {
+      "title": "Complete CRM",
+      "description": "Centralize all your client information in one secure place."
+    },
+    "invoicing": {
+      "title": "Professional GST/QST invoicing",
+      "description": "Create professional invoices with your branding in just a few clicks."
+    },
+    "projects": {
+      "title": "Project & budget tracking",
+      "description": "Track your projects with budgets, documents, and linked invoices."
+    },
+    "accounting": {
+      "title": "Simple accounting & reports",
+      "description": "Track your income, expenses, and view your financial reports."
+    },
+    "security": {
+      "title": "Secure data",
+      "description": "Your data is protected and isolated in a multi-tenant environment."
+    },
+    "taxes": {
+      "title": "Automatic GST/QST calculation",
+      "description": "Automatic calculation of Quebec taxes on your invoices."
+    }
+  },
+  "pricing": {
+    "title": "Transparent pricing",
+    "subtitle": "Join the beta and enjoy an exclusive offer",
+    "badge": "Free beta",
+    "planTitle": "Free during beta",
+    "planDescription": "50 spots only – full access, no credit card",
+    "features": {
+      "clients": "Unlimited clients",
+      "invoices": "Unlimited invoices",
+      "projects": "Project management",
+      "accounting": "Complete accounting",
+      "taxes": "Automatic GST/QST",
+      "support": "Email support"
+    },
+    "cta": "Start now"
+  },
+  "cta2": {
+    "title": "Ready to simplify your business management?",
+    "subtitle": "Become a beta tester and get 50% off for life",
+    "button": "Become a beta tester"
+  },
+  "footer": {
+    "copyright": "© 2025 SoloPack. All rights reserved.",
+    "madeWith": "Made with ❤️ in Quebec for local entrepreneurs",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  }
+}

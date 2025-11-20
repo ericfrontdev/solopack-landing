@@ -1,5 +1,5 @@
-import { LandingContent } from '@/components/landing-content'
+import { redirect } from 'next/navigation'
 
-export default function Home() {
-  return <LandingContent />
+export default function RootPage() {
+  redirect('/fr')
 }
