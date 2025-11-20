@@ -45,10 +45,6 @@
       "description": "Calcul automatique des taxes québécoises sur vos factures."
     }
   },
-  "proof": {
-    "text": "- 12 solopreneurs d’ici testent déjà SoloPack -",
-    "update": "(Mis à jour toutes les 30 secondes)"
-  },
   "pricing": {
     "title": "Tarification transparente",
     "subtitle": "Rejoignez la bêta et profitez d'une offre exclusive",

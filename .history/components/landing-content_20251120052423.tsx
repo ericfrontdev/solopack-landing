@@ -211,15 +211,22 @@ export function LandingContent() {
           </div>
         </section>
 
+        {/* Proof Section */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary dark:from-primary dark:to-primary/80" />
+
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-xl mx-auto border-l font-semibold">
+              {t('proof.text')}
+            </p>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section className="py-24 md:py-32 bg-gradient-to-b from-secondary/20 to-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <p className="text-xl text-muted-foreground mx-auto mb-8 font-semibold">
-                  {t('proof.text')}
-                </p>
-                {/* <p className="text-sm  mx-auto">{t('proof.update')}</p> */}
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
                   {t('pricing.title')}
                 </h2>

@@ -216,10 +216,12 @@ export function LandingContent() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <p className="text-xl text-muted-foreground mx-auto mb-8 font-semibold">
+                <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-xl mx-auto font-semibold">
                   {t('proof.text')}
                 </p>
-                {/* <p className="text-sm  mx-auto">{t('proof.update')}</p> */}
+                <p className="text-sm  text-primary-foreground/90 max-w-xl mx-auto">
+                  {t('proof.update')}
+                </p>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
                   {t('pricing.title')}
                 </h2>

@@ -45,10 +45,6 @@
       "description": "Automatic calculation of Quebec taxes on your invoices."
     }
   },
-  "proof": {
-    "text": "- 12 local solopreneurs are already trying SoloPack -",
-    "update": "(Updated every 30 seconds)"
-  },
   "pricing": {
     "title": "Transparent pricing",
     "subtitle": "Join the beta and enjoy an exclusive offer",
